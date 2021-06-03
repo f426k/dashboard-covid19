@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   content: {
     marginTop: 85,
   },
+  bar: {
+    background: "#38669d"
+  }
 }));
 
 const LineDashBoard: React.FC = () => {
@@ -40,7 +43,7 @@ const LineDashBoard: React.FC = () => {
   return (
     <div>
       {" "}
-      <AppBar position="absolute">
+      <AppBar position="absolute"  className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             Covid 19 Live Dashboard
@@ -68,7 +71,11 @@ const LineDashBoard: React.FC = () => {
           </Grid>
         </Grid>
       </Container>
-      <Link to="/">Home</Link>
+      <Link to="/" className={styles.text}>
+        <div className={styles.link}>
+          国別の推移を見る
+        </div>
+      </Link>
     </div>
   )
 }

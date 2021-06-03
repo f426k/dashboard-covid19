@@ -67,7 +67,11 @@ const DashBoard:React.FC = () => {
           </Grid>
         </Grid>
       </Container>
-        <Link to="/linechart">押してね</Link>      
+        <Link to="/linechart" className={styles.text}>
+          <div className={styles.link}>
+            世界の推移を見る
+          </div>
+        </Link>      
     </div>
   );
 };

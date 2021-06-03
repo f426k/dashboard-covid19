@@ -3,3 +3,19 @@
   align-items: center;
   flex-direction: column;
 }
+.link {
+  border-radius: 5px;
+  background-color: #4b75a6;
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
+  padding: 15px 15px;
+}
+.link:hover {
+  background-color: #38669d;
+  transition: 0.5s;
+}
+.text {
+  color: white;
+  text-decoration: none;
+}

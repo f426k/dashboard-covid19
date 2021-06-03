@@ -13,7 +13,7 @@ const Chart: React.FC = () => {
   <Line 
     data={{
     labels: dates.map((date) => 
-      (new Date(date).getFullYear()) + "/" + (new Date(date).getMonth()+1) + "/" + (new Date(date).getDate())),
+      (new Date(date).getFullYear()) + "-" + (new Date(date).getMonth()+1) + "-" + (new Date(date).getDate())),
       datasets: [
         {
           data: daily.map((data) => data.Confirmed),
