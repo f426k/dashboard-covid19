@@ -3,7 +3,7 @@ import styles from "./DashBoard.module.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Container, Grid } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAsyncGet, fetchAsyncGetDaily, selectData } from "../covidSlice";
+import { fetchAsyncGet, fetchAsyncGetDaily, selectData } from "../covidLinechartSlice";
 import SwitchCountry from '../SwitchCountry/SwitchCountry';
 import Cards from '../Cards/Cards';
 import PieChart from '../PieChart/PieChart';

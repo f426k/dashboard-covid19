@@ -9,13 +9,13 @@ const apiUrl = "https://covid19.mathdro.id/api";
 type APIDATA = typeof dataJson;
 type APIDATADAILY = typeof dataJsonDaily;
 
-type CovidState = {
+type CovidLinechartState = {
   data: APIDATA;
   country: string;
   dailyData: APIDATADAILY;
 };
 
-const initialState: CovidState = {
+const initialState: CovidLinechartState = {
   data: {
     "confirmed": {
     "value": 168497846,
@@ -80,20 +80,20 @@ const initialState: CovidState = {
   ] 
 };
 
-export const fetchAsyncGet = createAsyncThunk("covid/get", async() => {
+export const fetchAsyncGet = createAsyncThunk("covidLinechart/get", async() => {
   const { data } = await axios.get<APIDATA>(apiUrl);
   return data;
 });
 
 export const fetchAsyncGetDaily = createAsyncThunk(
-  "covid/getDaily", 
+  "covidLinechart/getDaily", 
   async() => {
     const { data } = await axios.get<APIDATADAILY>(`${apiUrl}/daily`);
     return data;
 });
 
 export const fetchAsyncGetCountry = createAsyncThunk(
-  "covid/getCountry", 
+  "covidLinechart/getCountry", 
   async(country: string) => {
     let dynamicUrl = apiUrl;
     if (country) {
@@ -104,8 +104,8 @@ export const fetchAsyncGetCountry = createAsyncThunk(
 });
 
 
-const covidSlice = createSlice({
-  name: "covid",
+const covidLinechartSlice = createSlice({
+  name: "covidLinechart",
   initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -131,8 +131,8 @@ const covidSlice = createSlice({
   },
 });
 
-export const selectData = (state: RootState) => state.Covid.data;
-export const selectDailyData = (state: RootState) => state.Covid.dailyData;
-export const selectCountry = (state: RootState) => state.Covid.country;
+export const selectData = (state: RootState) => state.covidlinechart.data;
+export const selectDailyData = (state: RootState) => state.covidlinechart.dailyData;
+export const selectCountry = (state: RootState) => state.covidlinechart.country;
 
-export default covidSlice.reducer;
+export default covidLinechartSlice.reducer;

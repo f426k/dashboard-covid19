@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import { NativeSelect, FormControl } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-import { fetchAsyncGetCountry } from "../covidSlice";
+import { fetchAsyncGetCountry } from "../covidLinechartSlice";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {

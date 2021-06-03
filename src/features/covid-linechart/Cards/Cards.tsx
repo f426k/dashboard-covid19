@@ -6,7 +6,7 @@ import { GiHastyGrave } from "react-icons/gi";
 import { MdLocalHospital } from "react-icons/md";
 import { AiFillLike } from "react-icons/ai";
 import { useSelector } from "react-redux";
-import { selectData } from "../covidSlice";
+import { selectData } from "../covidLinechartSlice";
 
 const Cards: React.FC = () => {
   const data = useSelector(selectData);

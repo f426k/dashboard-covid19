@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./Chart.module.css";
 import { Line, Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
-import { selectData, selectDailyData, selectCountry } from "../covidSlice";
+import { selectData, selectDailyData, selectCountry } from "../covidLinechartSlice";
 
 const Chart: React.FC = () => {
   const data = useSelector(selectData);

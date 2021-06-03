@@ -1,12 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import covidReducer from '../features/covid/covidSlice';
-import CovidReducer from '../features/covid-linechart/covidSlice';
+import CovidLinechartReducer from '../features/covid-linechart/covidLinechartSlice';
 
 
 export const store = configureStore({
   reducer: {
     covid: covidReducer,
-    Covid: CovidReducer
+    covidlinechart: CovidLinechartReducer
   },
 });
 
