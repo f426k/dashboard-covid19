@@ -13,21 +13,19 @@ const PieChart: React.FC = () => {
   const pieChart = data && (
     <Doughnut 
       data = {{
-        labels: ["感染者", "回復者", "死者"],
+        labels: ["感染者", "死者"],
         datasets: [
           {
             data: [
               data.confirmed.value,
-              data.recovered.value,
               data.deaths.value,
             ],
             backgroundColor: [
               "#3EC1D3",
-              "#a1de93",
               "#f38181",
             ],
-            hoverBackgroundColor: ["#37adbd", "#90C784", "#da7474"],
-            borderColor: ["transparent", "transparent", "transparent"]
+            hoverBackgroundColor: ["#37adbd", "#da7474"],
+            borderColor: ["transparent", "transparent"]
           },
         ],
       }}

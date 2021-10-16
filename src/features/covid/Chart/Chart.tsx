@@ -22,12 +22,6 @@ const Chart: React.FC = () => {
           showLine: false,
         },
         {
-          data: daily.map((data) => data.Recovered),
-          label: "回復者数",
-          borderColor: "#a1de93",
-          showLine: false,
-        },
-        {
           data: daily.map((data) => data.Deaths),
           label: "死者数",
           borderColor: "#f38181",

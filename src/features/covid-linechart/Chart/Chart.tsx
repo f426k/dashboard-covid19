@@ -12,18 +12,16 @@ const Chart: React.FC = () => {
   const barChart = data && (
     <Bar
     data={{
-      labels: ["感染者", "回復者", "死者"],
+      labels: ["感染者", "死者"],
       datasets: [
         {
           label: "People",
           backgroundColor: [
             "#3EC1D3",
-            "#a1de93",
             "#f38181",
           ],
           data: [
             data.confirmed.value,
-            data.recovered.value,
             data.deaths.value,
           ],
         },
